@@ -4,6 +4,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    background-image: url(../img/loginbg.jpg);
+}
+
 /* Absolute Screen Center */
 .outer {
     display: table;
@@ -25,6 +29,11 @@
 @media screen and (max-width: 767px) {
     .inner {
         width: calc(100% - 40px);;
+    }
+}
+@media screen and (max-height: 400px) {
+    .outer {
+        top: 50px;
     }
 }
 
@@ -61,4 +70,10 @@
     float: right;
     color: #333333;
     margin-right: 10px;
+}
+@media screen and (max-height: 400px) {
+    #footer {
+        position: absolute;
+        top: 110%;
+    }
 }
