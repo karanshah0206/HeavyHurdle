@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HeavyHurdle</title>
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand"><b>Heavy</b>Hurdle</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dropbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="dropbar" class="collapse navbar-collapse">
+                <div class="navbar-right">
+                    <a class="btn btn-info navbar-btn" href="login.html" style="margin-right: 5px;">Login</a>
+                    <a class="btn btn-primary navbar-btn" href="signup.html" style="margin-right: 30px;">Signup</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Login -->
+    <div class="outer">
+        <div class="middle">
+            <div class="inner pane">
+                <div class="pane-header">
+                    <h4 style="padding: 0; margin: 0;"><img src="img/icon.png"> SIGN UP</h4>
+                </div>
+                <form class="form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Name" name="login_name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" name="login_email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="10 Digit Phone Number" name="login_Phone" class="form-control" pattern="[0-9]{10}" title="Enter a 10 digital phone number, no hyphens, no spaces, no country code." required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" name="login_pass" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="At least 8 characters, a number, a capital letter, a small leter, and a special character." required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Retype Password" name="login_repass" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Login" class="btn btn-success btn-block">
+                    </div>
+                </form>
+                <p id="login_error" class="text-danger hidden">Hello</p>
+                No account? <a href="signup.html">Create One!</a><br>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="forgot.html">Forgot Password?</a>
+    </div>
+</body>
+</html>
