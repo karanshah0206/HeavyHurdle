@@ -76,4 +76,8 @@ body {
         position: absolute;
         top: 110%;
     }
+    .lower {
+        position: absolute;
+        top: 150% !important;
+    }
 }
