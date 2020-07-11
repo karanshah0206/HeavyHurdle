@@ -18,9 +18,9 @@
     box-shadow: 0 2px 6px rgba(0,0,0,.5);
     padding: 44px;
     position: absolute;
-    top: 50vh;
+    bottom: 50vh;
     left: 10%;
-    transform: translateY(-50%);
+    transform: translateY(50%);
 }
 .splash-panel h1 {
     margin-top: 0;
@@ -30,4 +30,30 @@
 }
 .splash-panel .il {
     margin-left: 10px;
+}
+.form-md {
+    display: none;
+}
+@media screen and (max-width: 767px) {
+    .splash {
+        background-position: right;
+        text-align: center;
+    }
+    .splash-panel h2 {
+        display: none;
+    }
+    .splash-panel {
+        padding: 20px;
+        left: 0;
+        width: 100%;
+        bottom: 5vh;
+        transform: translateY(0);
+    }
+    .form-lg {
+        display: none;
+    }
+    .form-md {
+        text-align: center;
+        display: block;
+    }
 }
