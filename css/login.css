@@ -47,13 +47,23 @@ body {
     position: relative;
     top: -20px;
 }
+.pane-footer {
+    position: relative;
+    text-align: right;
+    position: relative;
+    bottom: -30px;
+    right: -20px;
+}
 @media screen and (max-width: 767px) {
     .pane {
         padding: 20px;
     }
     .pane-header {
-        position: relative;
         top: -10px;
+    }
+    .pane-footer {
+        bottom: -15px;
+        right: -10px;
     }
 }
 
