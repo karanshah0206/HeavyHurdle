@@ -31,6 +31,9 @@
 .splash-panel .il {
     margin-left: 10px;
 }
+.form-lg {
+    text-align: center;
+}
 .form-md {
     display: none;
 }
