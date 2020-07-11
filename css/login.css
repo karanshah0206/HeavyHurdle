@@ -45,7 +45,7 @@ body {
 }
 .pane-header {
     position: relative;
-    top: -30px;
+    top: -20px;
 }
 @media screen and (max-width: 767px) {
     .pane {
@@ -53,7 +53,7 @@ body {
     }
     .pane-header {
         position: relative;
-        top: -15px;
+        top: -10px;
     }
 }
 
