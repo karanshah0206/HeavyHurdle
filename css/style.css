@@ -12,6 +12,7 @@
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .splash-panel {
     background-color: rgba(255, 255, 255, 0.9);
@@ -58,6 +59,27 @@
     .form-md {
         text-align: center;
         display: block;
+    }
+}
+
+/* Content */
+.content-prev {
+    margin: 50px 0;
+    text-align: center;
+}
+.thumbnail {
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,.5);
+}
+.content-box {
+    padding: 50px;
+    text-align: center;
+}
+@media screen and (max-width: 767px) {
+    .content-box {
+        padding: 20px;
     }
 }
 
