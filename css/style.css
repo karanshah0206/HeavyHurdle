@@ -113,9 +113,42 @@
     text-align: left;
     margin-left: 30px;
     margin-bottom: 5px;
+    cursor: pointer;
 }
 .thumbnail-pricing .features-list i {
-    color: #337AB7
+    color: #337AB7;
+    cursor: pointer;
+}
+.features-list span  {
+    visibility: hidden;
+    width: 60%;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 20%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.features-list span::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+.features-list:hover span{
+    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 .content-box {
     padding: 50px;
