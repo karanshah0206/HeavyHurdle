@@ -88,6 +88,35 @@
     box-shadow: 0 5px 6px rgba(0,0,0,.9);
     transition: box-shadow 0.5s;
 }
+.thumbnail-pricing {
+    border: 2px solid #5BC0DE;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 10px 0;
+}
+.features-highlight {
+    border: 2px solid #337AB7;
+    margin: 0 20px;
+    padding: 10px;
+}
+.features-highlight em {
+    text-decoration: none;
+    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+.thumbnail-pricing .features-prev {
+    text-align: left;
+    margin-left: 15px;
+}
+.thumbnail-pricing .features-list {
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 5px;
+}
+.thumbnail-pricing .features-list i {
+    color: #337AB7
+}
 .content-box {
     padding: 50px;
     padding-bottom: 0;
