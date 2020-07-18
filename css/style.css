@@ -23,6 +23,23 @@
     left: 10%;
     transform: translateY(50%);
 }
+.splash-small {
+    background-image: url(../img/small-splash.jpg);
+    margin-top: 50px;
+    height: 30vh;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+.splash-small-panel {
+    background-color: transparent;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
 .splash-panel h1 {
     margin-top: 0;
     margin-left: 0;
