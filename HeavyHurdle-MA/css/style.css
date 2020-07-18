@@ -1,0 +1,112 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+/* User Controls */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    background-color: #333333;
+    height: 40px;
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    float: left;
+}
+
+.navbar-controls {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    padding: 0;
+    margin: 0;
+}
+
+#micControl {
+    color: #ffffff;
+    font-size: 15px;
+    padding: 8px 10px;
+    margin-top: 3px;
+    margin-right: 10px;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#decControl {
+    color: #ffffff;
+    font-size: 15px;
+    padding: 8px 10px;
+    margin-top: 3px;
+    margin-right: 10px;
+    border: 2px solid rgb(200, 0, 0);
+    background-color: rgb(200, 0, 0);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#vidControl {
+    color: #ffffff;
+    font-size: 15px;
+    padding: 8px 10px;
+    margin-top: 3px;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.navbar-drop {
+    color: #ffffff;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    float: right;
+}
+
+.control-drop {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #333333;
+    color: white;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid white;
+}
+
+.control-item {
+    border-bottom: 1px solid white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.control-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.control-item ~ .active {
+    background-color: white;
+    color: #333333;
+}
+
+@media screen and (max-width:767px) {
+    .navbar-brand {
+        display: none;
+    }
+}
