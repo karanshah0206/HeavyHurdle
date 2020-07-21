@@ -11,6 +11,7 @@
 
 /* User Controls */
 .navbar {
+    z-index: 1;
     position: fixed;
     top: 0;
     left: 0;
@@ -18,6 +19,7 @@
     margin: 0;
     background-color: #333333;
     height: 40px;
+    max-height: 40px;
 }
 .navbar-brand {
     color: #ffffff;
@@ -73,13 +75,26 @@
     cursor: pointer;
     float: right;
 }
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
     .navbar-brand {
         display: none;
     }
 }
+@media screen and (max-width: 300px) {
+    .navbar-controls {
+        position: absolute;
+        left: 10px;
+        transform: translateX(0);
+        -o-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -webkit-transform: translateX(0);
+        padding: 0;
+        margin: 0;
+    }
+}
 
 .control-drop {
+    z-index: 2;
     position: absolute;
     top: 40px;
     right: 0;
@@ -105,5 +120,62 @@
     .control-item {
         padding: 5px 20px;
         font-size: 10px;
+    }
+}
+
+/* Remote Video */
+.discussion {
+    position: absolute;
+    left: 3vw;
+    top: 41px;
+    height: calc(100vh - 50px);
+    width: 94vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 1px solid black;
+}
+@media screen and (orientation: portrait) {
+    .presentation {
+        position: absolute;
+        left: 3vw;
+        top: calc(50vh + 50px);
+        width: 94vw;
+        height: 40vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border: 1px solid black;
+    }
+}
+@media screen and (orientation: landscape) {
+    .presentation {
+        position: absolute;
+        left: 0;
+        top: 41px;
+        height: calc(100vh - 50px);
+        width: 20vw;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border: 1px solid black;
+    }
+}
+
+/* Presentation */
+@media screen and (orientation: portrait) {
+    #present {
+        position: absolute;
+        left: 3vw;
+        top: 41px;
+        width: 94vw;
+        height: 50vh;
+    }
+}
+@media screen and (orientation: landscape) {
+    #present {
+        position: absolute;
+        right: 0;
+        top: 41px;
+        height: calc(100vh - 50px);
+        width: 79vw;
+        overflow: auto;
     }
 }

@@ -12,7 +12,6 @@
     <script src="https://kit.fontawesome.com/c9fd89f1de.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- User Controls -->
     <div class="navbar">
         <div class="navbar-brand" title="HeavyHurdle">
             <b>Heavy</b>Hurdle
@@ -27,16 +26,21 @@
         </div>
     </div>
     <div id="listControls" class="control-drop hidden">
+        <div class="control-item" id="changeMode"><i class="fas fa-object-group"></i> Enter Discussion Mode</div>
         <div class="control-item"><i class="fas fa-users"></i> Users</div>
         <div class="control-item"><i class="fas fa-comment"></i> Chat</div>
         <div class="control-item no-admin"><i class="fas fa-hand-point-up"></i> Raise Hand</div>
         <div class="control-item"><i class="fas fa-desktop"></i> Share Screen</div>
-        <div class="control-item"><i class="fas fa-file-alt"></i> View Document</div>
-        <div class="control-item"><i class="fas fa-code"></i> Code Editor</div>
-        <div class="control-item"><i class="fas fa-sticky-note"></i> Shared Notepad</div>
-        <div class="control-item"><i class="fab fa-youtube"></i> Play YouTube</div>
         <div class="control-item"><i class="fas fa-chalkboard-teacher"></i> Whiteboard</div>
+        <div class="control-item"><i class="fas fa-file-alt"></i> View Document</div>
+        <div class="control-item"><i class="fab fa-youtube"></i> Play YouTube</div>
+        <div class="control-item"><i class="fas fa-sticky-note"></i> Shared Notepad</div>
+        <div class="control-item"><i class="fas fa-code"></i> Code Editor</div>
         <div class="control-item admin-only"><i class="fas fa-cogs"></i> Admin Controls</div>
+    </div>
+    <div id="remoteVid" class="presentation"></div>
+    <div id="present">
+        <iframe height="100%" width="100%"></iframe>
     </div>
 
     <script src="js/ui.js"></script>
