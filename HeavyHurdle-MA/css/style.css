@@ -31,7 +31,7 @@
     background-color: #c9302c;
     border-color: #ac2925;
 }
-.btn-close:disabled {
+.btn-disabled {
     opacity: 0.5;
 }
 
@@ -231,4 +231,9 @@
     border: 0;
     padding: 0;
     margin: 0;
+}
+#mainSpeaker {
+    width: 100%;
+    height: calc(100% - 2px);
+    border: 1px solid orange;
 }

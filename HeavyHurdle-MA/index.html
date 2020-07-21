@@ -36,6 +36,7 @@
         <div class="control-item"><i class="fas fa-users"></i> Users</div>
         <div class="control-item"><i class="fas fa-comment"></i> Chat</div>
         <div class="control-item no-admin"><i class="fas fa-hand-point-up"></i> Raise Hand</div>
+        <!-- To Be Shared - Remove Later -->
         <div class="control-item"><i class="fas fa-desktop"></i> Share Screen</div>
         <div class="control-item"><i class="fas fa-chalkboard-teacher"></i> Whiteboard</div>
         <div class="control-item"><i class="fas fa-file-alt"></i> View Document</div>
@@ -46,11 +47,12 @@
     </div>
     <div id="remoteVid" class="presentation"></div>
     <div id="present">
-        <div id="presentHeader">
+        <div id="presentHeader" class="hidden">
             <p id="headTitle">Presentation</p>
-            <button id="headClose" class="btn btn-close" disabled><i class="fas fa-times"></i></button>
+            <button id="headClose" class="btn btn-close btn-disabled"><i class="fas fa-times"></i></button>
         </div>
-        <iframe id="presentFrame" frameborder="0"></iframe>
+        <iframe id="presentFrame" src="" frameborder="0" class="hidden"></iframe>
+        <div id="mainSpeaker" class=""></div>
     </div>
 
     <script src="js/ui.js"></script>
