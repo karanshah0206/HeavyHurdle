@@ -19,7 +19,6 @@
     background-color: #333333;
     height: 40px;
 }
-
 .navbar-brand {
     color: #ffffff;
     font-size: 15px;
@@ -27,7 +26,6 @@
     cursor: pointer;
     float: left;
 }
-
 .navbar-controls {
     position: absolute;
     left: 50%;
@@ -38,7 +36,6 @@
     padding: 0;
     margin: 0;
 }
-
 #micControl {
     color: #ffffff;
     font-size: 15px;
@@ -49,7 +46,6 @@
     cursor: pointer;
     border-radius: 5px;
 }
-
 #decControl {
     color: #ffffff;
     font-size: 15px;
@@ -61,7 +57,6 @@
     cursor: pointer;
     border-radius: 5px;
 }
-
 #vidControl {
     color: #ffffff;
     font-size: 15px;
@@ -71,13 +66,17 @@
     cursor: pointer;
     border-radius: 5px;
 }
-
 .navbar-drop {
     color: #ffffff;
     font-size: 15px;
     padding: 10px;
     cursor: pointer;
     float: right;
+}
+@media screen and (max-width:767px) {
+    .navbar-brand {
+        display: none;
+    }
 }
 
 .control-drop {
@@ -90,7 +89,6 @@
     padding: 0;
     border-top: 1px solid white;
 }
-
 .control-item {
     border-bottom: 1px solid white;
     padding: 10px 20px;
@@ -99,14 +97,13 @@
 .control-item:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
-
 .control-item ~ .active {
     background-color: white;
     color: #333333;
 }
-
-@media screen and (max-width:767px) {
-    .navbar-brand {
-        display: none;
+@media screen and (max-height: 500px) {
+    .control-item {
+        padding: 5px 20px;
+        font-size: 10px;
     }
 }
