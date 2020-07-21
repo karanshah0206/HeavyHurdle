@@ -9,6 +9,11 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
+    <!-- Alertify -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
     <script src="js/creds.js"></script>
     <script src="https://kit.fontawesome.com/c9fd89f1de.js" crossorigin="anonymous"></script>
 </head>
@@ -35,15 +40,20 @@
         <div class="control-item"><i class="fas fa-chalkboard-teacher"></i> Whiteboard</div>
         <div class="control-item"><i class="fas fa-file-alt"></i> View Document</div>
         <div class="control-item"><i class="fab fa-youtube"></i> Play YouTube</div>
-        <div class="control-item"><i class="fas fa-sticky-note"></i> Shared Notepad</div>
-        <div class="control-item"><i class="fas fa-code"></i> Code Editor</div>
+        <div class="control-item" id="toggleNote"><i class="fas fa-sticky-note"></i> Shared Notepad</div>
+        <div class="control-item" id="toggleCode"><i class="fas fa-code"></i> Code Editor</div>
         <div class="control-item admin-only"><i class="fas fa-cogs"></i> Admin Controls</div>
     </div>
     <div id="remoteVid" class="presentation"></div>
     <div id="present">
-        <iframe height="100%" width="100%"></iframe>
+        <div id="presentHeader">
+            <p id="headTitle">Presentation</p>
+            <button id="headClose" class="btn btn-close" disabled><i class="fas fa-times"></i></button>
+        </div>
+        <iframe id="presentFrame" frameborder="0"></iframe>
     </div>
 
     <script src="js/ui.js"></script>
+    <script src="js/present.js"></script>
 </body>
 </html>

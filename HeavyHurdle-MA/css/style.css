@@ -9,6 +9,32 @@
     display: none;
 }
 
+.btn {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btn-close {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+.btn-close:hover {
+    background-color: #c9302c;
+    border-color: #ac2925;
+}
+.btn-close:disabled {
+    opacity: 0.5;
+}
+
 /* User Controls */
 .navbar {
     z-index: 1;
@@ -167,6 +193,7 @@
         top: 41px;
         width: 94vw;
         height: 50vh;
+        overflow: hidden;
     }
 }
 @media screen and (orientation: landscape) {
@@ -176,6 +203,32 @@
         top: 41px;
         height: calc(100vh - 50px);
         width: 79vw;
-        overflow: auto;
+        overflow: hidden;
     }
+}
+
+#presentHeader {
+    width: 100%;
+    height: 30px;
+    max-height: 30px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #cccccc;
+}
+#presentHeader button {
+    margin-bottom: 4px;
+}
+#headTitle {
+    width: calc(100% - 60px);
+    display: inline-block;
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 15px
+}
+#presentFrame {
+    width: 100%;
+    height: calc(100% - 32px);
+    border: 0;
+    padding: 0;
+    margin: 0;
 }

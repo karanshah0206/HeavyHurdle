@@ -1,6 +1,8 @@
 // Getting Credentials
 const room = getCreds('room');
 const user = sessionStorage.getItem('HHUser');
+var admin = false;
+var presenter = false;
 
 // Uses GET For Javascript
 function getCreds(key='') {
