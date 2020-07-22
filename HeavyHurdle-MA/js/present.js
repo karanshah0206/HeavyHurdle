@@ -28,7 +28,9 @@ document.getElementById('headClose').addEventListener('click', () => {
 document.getElementById('toggleNote').addEventListener('click', () => {
     if (frameFree()) {
         setNotepad();
-        addPresenter();
+        if (!presenter) {
+            addPresenter();
+        }
     }
     else {
         alertify.error('Another Presentation Running.');
@@ -37,12 +39,25 @@ document.getElementById('toggleNote').addEventListener('click', () => {
 document.getElementById('toggleCode').addEventListener('click', () => {
     if (frameFree()) {
         setCode();
-        addPresenter();
+        if (!presenter) {
+            addPresenter();
+        }
     }
     else {
         alertify.error('Another Presentation Running.');
     }
 });
+document.getElementById('toggleBoard').addEventListener('click', () => {
+    if (frameFree()) {
+        setBoard();
+        if (!presenter) {
+            addPresenter();
+        }
+    }
+    else {
+        alertify.error('Another Presentation Running.');
+    }
+})
 
 // Actions
 function addPresenter () {
@@ -83,15 +98,22 @@ function setNotepad () {
     // frame.src = 'A:/Personal Files/Codes and Tech/Corporate Projects/HeavyHurdle/HeavyHurdle/HeavyHurdle-MA/notepad/codemirror.html#-' + room + 'Notepad';
     frame.src = 'A:/Personal Files/Codes and Tech/Web Projects/Firebase/Learning-Firebase/codemirror.html#-' + room + 'Notepad';
     head.innerText = 'Shared Notepad';
+    speaker.classList.add('hidden');
     document.getElementById('presentHeader').classList.remove('hidden');
     frame.classList.remove('hidden');
-    speaker.classList.add('hidden');
 }
 function setCode () {
     // frame.src = 'A:/Personal Files/Codes and Tech/Corporate Projects/HeavyHurdle/HeavyHurdle/HeavyHurdle-MA/frames/acecode.html#-' + room + 'Code';
     frame.src = 'A:/Personal Files/Codes and Tech/Web Projects/Firebase/Learning-Firebase/acecode.html#-' + room + 'Code';
     head.innerText = 'Code Editor';
+    speaker.classList.add('hidden');
     document.getElementById('presentHeader').classList.remove('hidden');
     frame.classList.remove('hidden');
+}
+function setBoard () {
+    frame.src = 'https://www.whiteboard.team/app/board/' + room + 'HHWhiteboard' + '?clientid=6dbdff4f22c0251ef3245b4a313e2b21';
+    head.innerText = 'Whiteboard';
     speaker.classList.add('hidden');
+    document.getElementById('presentHeader').classList.remove('hidden');
+    frame.classList.remove('hidden');
 }
