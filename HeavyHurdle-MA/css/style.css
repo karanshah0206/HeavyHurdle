@@ -208,7 +208,7 @@
 }
 
 #presentHeader {
-    width: 100%;
+    width: calc(100% - 2px);
     height: 30px;
     max-height: 30px;
     border-top-right-radius: 10px;
@@ -226,14 +226,14 @@
     font-size: 15px
 }
 #presentFrame {
-    width: 100%;
+    width: calc(100% - 2px);
     height: calc(100% - 32px);
     border: 0;
     padding: 0;
     margin: 0;
 }
 #mainSpeaker {
-    width: 100%;
+    width: calc(100% - 2px);
     height: calc(100% - 2px);
     border: 1px solid orange;
 }
