@@ -27,10 +27,10 @@ document.getElementById('headClose').addEventListener('click', () => {
 });
 document.getElementById('toggleNote').addEventListener('click', () => {
     if (frameFree()) {
-        setNotepad();
         if (!presenter) {
             addPresenter();
         }
+        setNotepad();
     }
     else {
         alertify.error('Another Presentation Running.');
@@ -38,10 +38,10 @@ document.getElementById('toggleNote').addEventListener('click', () => {
 });
 document.getElementById('toggleCode').addEventListener('click', () => {
     if (frameFree()) {
-        setCode();
         if (!presenter) {
             addPresenter();
         }
+        setCode();
     }
     else {
         alertify.error('Another Presentation Running.');
@@ -49,10 +49,10 @@ document.getElementById('toggleCode').addEventListener('click', () => {
 });
 document.getElementById('toggleBoard').addEventListener('click', () => {
     if (frameFree()) {
-        setBoard();
         if (!presenter) {
             addPresenter();
         }
+        setBoard();
     }
     else {
         alertify.error('Another Presentation Running.');
