@@ -1,3 +1,17 @@
+// Show/Hide Admin Controls
+if (!admin || admin == "false") {
+    var onlyAdmin = document.getElementsByClassName('admin-only');
+    for (var i = 0; i < onlyAdmin.length; i++) {
+        onlyAdmin[i].classList.add('hidden');
+    }
+}
+if (admin == "true") {
+    var noAdmin = document.getElementsByClassName('no-admin');
+    for (var i = 0; i < noAdmin.length; i++) {
+        noAdmin[i].classList.add('hidden');
+    }
+}
+
 // Control List Toggle
 document.getElementById('allControl').addEventListener('click', () => {
     document.getElementById('listControls').classList.toggle('hidden');
