@@ -57,7 +57,29 @@ document.getElementById('toggleBoard').addEventListener('click', () => {
     else {
         alertify.error('Another Presentation Running.');
     }
-})
+});
+document.getElementById('toggleYouTube').addEventListener('click', () => {
+    if (frameFree()) {
+        if (!presenter) {
+            addPresenter();
+        }
+        setYoutube();
+    }
+    else {
+        alertify.error('Another Presentation Running.');
+    }
+});
+document.getElementById('toggleViewer').addEventListener('click', () => {
+    if (frameFree()) {
+        if (!presenter) {
+            addPresenter();
+        }
+        setViewier();
+    }
+     else {
+         alertify.error('Another Presentation Running.');
+     }
+});
 
 // Actions
 function addPresenter () {
@@ -89,13 +111,12 @@ function frameFree () {
         if (admin || presenter) {
             return true;
         }
-        console.log(admin);
         return false;
     }
 }
 
 function setNotepad () {
-    // frame.src = 'A:/Personal Files/Codes and Tech/Corporate Projects/HeavyHurdle/HeavyHurdle/HeavyHurdle-MA/notepad/codemirror.html#-' + room + 'Notepad';
+    // frame.src = '../frames/notepad/codemirror.html#-' + room + 'Notepad';
     frame.src = 'A:/Personal Files/Codes and Tech/Web Projects/Firebase/Learning-Firebase/codemirror.html#-' + room + 'Notepad';
     head.innerText = 'Shared Notepad';
     speaker.classList.add('hidden');
@@ -103,7 +124,7 @@ function setNotepad () {
     frame.classList.remove('hidden');
 }
 function setCode () {
-    // frame.src = 'A:/Personal Files/Codes and Tech/Corporate Projects/HeavyHurdle/HeavyHurdle/HeavyHurdle-MA/frames/acecode.html#-' + room + 'Code';
+    // frame.src = '../frames/code/acecode.html#-' + room + 'Code';
     frame.src = 'A:/Personal Files/Codes and Tech/Web Projects/Firebase/Learning-Firebase/acecode.html#-' + room + 'Code';
     head.innerText = 'Code Editor';
     speaker.classList.add('hidden');
@@ -113,6 +134,22 @@ function setCode () {
 function setBoard () {
     frame.src = 'https://www.whiteboard.team/app/board/' + room + 'HHWhiteboard' + '?clientid=6dbdff4f22c0251ef3245b4a313e2b21';
     head.innerText = 'Whiteboard';
+    speaker.classList.add('hidden');
+    document.getElementById('presentHeader').classList.remove('hidden');
+    frame.classList.remove('hidden');
+}
+function setYoutube () {
+    // frame.src = '../frames/player/index.html';
+    frame.src = 'https://www.youtube.com/embed/r_hYR53r61M';
+    head.innerText = 'YouTube Player';
+    speaker.classList.add('hidden');
+    document.getElementById('presentHeader').classList.remove('hidden');
+    frame.classList.remove('hidden');
+}
+function setViewier() {
+    // frame.src = '../frames/viewer/docviewer.html';
+    frame.src = 'https://www.youtube.com/embed/r_hYR53r61M';
+    head.innerText = 'Document Viewier';
     speaker.classList.add('hidden');
     document.getElementById('presentHeader').classList.remove('hidden');
     frame.classList.remove('hidden');
