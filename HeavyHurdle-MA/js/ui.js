@@ -32,6 +32,9 @@ document.getElementById('toggleChat').addEventListener('click', () => {
         document.getElementById('chatBar').classList.add('slider-left-shown');
     }
 });
+document.getElementById('chatBarClose').addEventListener('click', () => {
+    document.getElementById('chatBar').classList.remove('slider-left-shown');
+});
 document.getElementById('toggleUser').addEventListener('click', () => {
     if (document.getElementById('userBar').classList.contains('slider-left-shown')) {
         document.getElementById('userBar').classList.remove('slider-left-shown');
@@ -42,6 +45,9 @@ document.getElementById('toggleUser').addEventListener('click', () => {
         }
         document.getElementById('userBar').classList.add('slider-left-shown');
     }
+});
+document.getElementById('userBarClose').addEventListener('click', () => {
+    document.getElementById('userBar').classList.remove('slider-left-shown');
 });
 
 // Change Mode

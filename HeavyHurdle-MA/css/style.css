@@ -167,6 +167,23 @@
 .slider-left-shown {
     width: 450px !important;
 }
+.slider-header {
+    padding: 15px;
+    border-bottom: 1px solid #cccccc;
+    position: relative;
+    overflow: hidden;
+}
+.slider-header h3 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 15px;
+    text-align: center;
+}
+.slider-header button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
 @media screen and (max-width: 575px) {
     .slider-left {
         height: calc(100vh - 42px);
@@ -174,6 +191,15 @@
     }
     .slider-left-shown {
         width: calc(100vw - 2px) !important;
+    }
+}
+@media screen and (max-height: 400px) {
+    .slider-header {
+        padding: 8px;
+    }
+    .slider-header button {
+        top: 8px;
+        right: 8px;
     }
 }
 
