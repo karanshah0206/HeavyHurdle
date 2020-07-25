@@ -20,6 +20,30 @@ document.getElementById('listControls').addEventListener('click', () => {
     document.getElementById('listControls').classList.add('hidden');
 });
 
+// Slider
+document.getElementById('toggleChat').addEventListener('click', () => {
+    if (document.getElementById('chatBar').classList.contains('slider-left-shown')) {
+        document.getElementById('chatBar').classList.remove('slider-left-shown');
+    }
+    else {
+        if (document.getElementById('userBar').classList.contains('slider-left-shown')) {
+            document.getElementById('userBar').classList.remove('slider-left-shown');
+        }
+        document.getElementById('chatBar').classList.add('slider-left-shown');
+    }
+});
+document.getElementById('toggleUser').addEventListener('click', () => {
+    if (document.getElementById('userBar').classList.contains('slider-left-shown')) {
+        document.getElementById('userBar').classList.remove('slider-left-shown');
+    }
+    else {
+        if (document.getElementById('chatBar').classList.contains('slider-left-shown')) {
+            document.getElementById('chatBar').classList.remove('slider-left-shown');
+        }
+        document.getElementById('userBar').classList.add('slider-left-shown');
+    }
+});
+
 // Change Mode
 document.getElementById('changeMode').addEventListener('click', () => {
     if (document.getElementById('remoteVid').classList.contains('presentation')) {

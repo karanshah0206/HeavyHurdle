@@ -149,6 +149,34 @@
     }
 }
 
+/* Slider */
+.slider-left {
+    height: calc(100vh - 45px);
+    max-height: calc(100vh - 45px);
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 41px;
+    right: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: 0.5s;
+    box-shadow: 0 2px 6px rgba(0,0,0,.5);
+}
+.slider-left-shown {
+    width: 450px !important;
+}
+@media screen and (max-width: 575px) {
+    .slider-left {
+        height: calc(100vh - 42px);
+        max-height: calc(100vh - 42px);
+    }
+    .slider-left-shown {
+        width: calc(100vw - 2px) !important;
+    }
+}
+
 /* Remote Video */
 .discussion {
     position: absolute;
