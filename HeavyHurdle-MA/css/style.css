@@ -38,7 +38,7 @@
 
 /* User Controls */
 .navbar {
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     top: 0;
     left: 0;
@@ -122,7 +122,7 @@
 
 /* Nav Dropdown */
 .control-drop {
-    z-index: 2;
+    z-index: 3;
     position: absolute;
     top: 40px;
     right: 0;
@@ -316,6 +316,12 @@
     padding: 5px 0;
     
 }
+.chat-container {
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 150px);
+}
 .chat-namestamp {
     font-weight: bold;
     font-size: 15px;
@@ -336,4 +342,56 @@
     font-size: 10px;
     margin-right: 5px;
     padding-top: 5px;
+}
+.chat-send {
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    max-height: 50px;
+    overflow: hidden;
+}
+#chatMessage {
+    position: absolute;
+    top: 0;
+    left: 2px;
+    padding: 0 5px;
+    margin: 0;
+    border-radius: 0;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: 3px solid #cccccc;
+    width: calc(90% - 5px);
+    resize: none;
+    font-size: 13px;
+    height: 50px;
+    max-height: 50px;
+    transition: border 0.3s;    
+}
+#chatMessage:focus {
+    outline: none;
+    border-left: 3px solid rgb(12, 199, 12);
+    transition: border 0.3s;
+}
+#chatSend {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    width: calc(10% - 5px);
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    height: 50px;
+    max-height: 50px;
+    cursor: pointer;
+    background-color: rgb(12, 199, 12);
+    color: white;
+}
+#chatSend:focus {
+    outline: none;
 }
