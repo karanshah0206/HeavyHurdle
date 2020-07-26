@@ -172,6 +172,9 @@
     border-bottom: 1px solid #cccccc;
     position: relative;
     overflow: hidden;
+    height: 20px;
+    max-height: 20px;
+    overflow-y: hidden;
 }
 .slider-header h3 {
     text-decoration: none;
@@ -183,6 +186,15 @@
     position: absolute;
     top: 15px;
     right: 15px;
+}
+.slider-body {
+    position: absolute;
+    top: 51px;
+    left: 0;
+    height: calc(100vh - 96px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
 }
 @media screen and (max-width: 575px) {
     .slider-left {
@@ -200,6 +212,10 @@
     .slider-header button {
         top: 8px;
         right: 8px;
+    }
+    .slider-body {
+        top: 37px;
+        height: calc(100vh - 82px);
     }
 }
 
