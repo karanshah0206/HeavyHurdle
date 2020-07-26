@@ -9,6 +9,7 @@
     display: none;
 }
 
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 3px 10px;
@@ -119,6 +120,7 @@
     }
 }
 
+/* Nav Dropdown */
 .control-drop {
     z-index: 2;
     position: absolute;
@@ -161,7 +163,7 @@
     background-color: #ffffff;
     overflow-x: hidden;
     overflow-y: auto;
-    transition: 0.5s;
+    transition: 0.3s;
     box-shadow: 0 2px 6px rgba(0,0,0,.5);
 }
 .slider-left-shown {
@@ -219,7 +221,7 @@
     }
 }
 
-/* Remote Video */
+/* Layouts */
 .discussion {
     position: absolute;
     left: 3vw;
@@ -276,7 +278,6 @@
         overflow: hidden;
     }
 }
-
 #presentHeader {
     width: calc(100% - 2px);
     height: 30px;
@@ -306,4 +307,33 @@
     width: calc(100% - 2px);
     height: calc(100% - 2px);
     border: 1px solid orange;
+}
+
+/* Chat */
+.chat-box {
+    width: 100%;
+    margin: 0;
+    padding: 5px 0;
+    
+}
+.chat-namestamp {
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-right: 5px;
+    width: calc(100% - 20px);
+    overflow: hidden;
+}
+.chat-content {
+    font-size: 14px;
+    margin-left: 15px;
+    margin-right: 5px;
+    width: calc(100% - 20px);
+    overflow-wrap: break-word;
+}
+.chat-timestamp {
+    text-align: right;
+    font-size: 10px;
+    margin-right: 5px;
+    padding-top: 5px;
 }
