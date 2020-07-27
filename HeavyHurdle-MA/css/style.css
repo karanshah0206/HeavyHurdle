@@ -162,17 +162,17 @@
     top: 40px;
     right: 0;
     background-color: #333333;
-    color: white;
+    color: #ffffff;
     margin: 0;
     padding: 0;
-    border-top: 1px solid white;
+    border-top: 1px solid #ffffff;
     user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
 }
 .control-item {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #ffffff;
     padding: 10px 20px;
     cursor: pointer;
     transition: 0.3s;
@@ -182,7 +182,7 @@
     transition: 0.3s;
 }
 .control-item ~ .active {
-    background-color: white;
+    background-color: #ffffff;
     color: #333333;
 }
 @media screen and (max-height: 500px) {
@@ -271,7 +271,7 @@
     width: 94vw;
     overflow-x: hidden;
     overflow-y: auto;
-    border: 1px solid black;
+    border: 1px solid #000000;
 }
 @media screen and (orientation: portrait) {
     .presentation {
@@ -282,7 +282,7 @@
         height: 40vh;
         overflow-x: hidden;
         overflow-y: auto;
-        border: 1px solid black;
+        border: 1px solid #000000;
     }
 }
 @media screen and (orientation: landscape) {
@@ -294,7 +294,7 @@
         width: 20vw;
         overflow-x: hidden;
         overflow-y: auto;
-        border: 1px solid black;
+        border: 1px solid #000000;
     }
 }
 
@@ -347,7 +347,7 @@
 #mainSpeaker {
     width: calc(100% - 2px);
     height: calc(100% - 2px);
-    border: 1px solid orange;
+    border: 1px solid rgb(255, 165, 0);
 }
 
 /* Chat */
@@ -431,7 +431,7 @@
     max-height: 50px;
     cursor: pointer;
     background-color: rgb(12, 199, 12);
-    color: white;
+    color: #ffffff;
 }
 #chatSend:focus {
     outline: none;
@@ -468,6 +468,6 @@
     overflow-y: hidden;
 }
 .user-status {
-    color: red;
+    color: rgb(255, 0, 0);
     padding-right: 5px;
 }
