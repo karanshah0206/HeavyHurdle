@@ -15,9 +15,13 @@ if (admin == "true") {
 // Control List Toggle
 document.getElementById('allControl').addEventListener('click', () => {
     document.getElementById('listControls').classList.toggle('hidden');
+    document.getElementById('allControl').classList.toggle('navbar-drop');
+    document.getElementById('allControl').classList.toggle('navbar-dropped');
 });
 document.getElementById('listControls').addEventListener('click', () => {
     document.getElementById('listControls').classList.add('hidden');
+    document.getElementById('allControl').classList.remove('navbar-dropped');
+    document.getElementById('allControl').classList.add('navbar-drop');
 });
 
 // Slider
