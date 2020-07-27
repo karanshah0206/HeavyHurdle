@@ -56,12 +56,12 @@ document.getElementById('changeMode').addEventListener('click', () => {
         document.getElementById('remoteVid').classList.remove('presentation');
         document.getElementById('present').classList.add('hidden');
         document.getElementById('remoteVid').classList.add('discussion');
-        document.getElementById('changeMode').innerHTML = '<i class="fas fa-object-group"></i> Enter Presentation Mode';
+        document.getElementById('changeMode').innerHTML = '<i class="fas fa-object-group"></i> Show Spotlight Layout';
     }
     else {
         document.getElementById('remoteVid').classList.remove('discussion');
         document.getElementById('remoteVid').classList.add('presentation');
         document.getElementById('present').classList.remove('hidden');
-        document.getElementById('changeMode').innerHTML = '<i class="fas fa-object-group"></i> Enter Discussion Mode';
+        document.getElementById('changeMode').innerHTML = '<i class="fas fa-object-group"></i> Show Tile Layout';
     }
 });
