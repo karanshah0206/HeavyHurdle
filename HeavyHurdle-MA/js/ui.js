@@ -56,16 +56,20 @@ document.getElementById('userBarClose').addEventListener('click', () => {
 
 // Change Mode
 document.getElementById('changeMode').addEventListener('click', () => {
-    if (document.getElementById('remoteVid').classList.contains('presentation')) {
-        document.getElementById('remoteVid').classList.remove('presentation');
-        document.getElementById('present').classList.add('hidden');
-        document.getElementById('remoteVid').classList.add('discussion');
-        document.getElementById('changeMode').innerHTML = '<i class="fas fa-object-group"></i> Show Spotlight Layout';
-    }
-    else {
-        document.getElementById('remoteVid').classList.remove('discussion');
-        document.getElementById('remoteVid').classList.add('presentation');
-        document.getElementById('present').classList.remove('hidden');
-        document.getElementById('changeMode').innerHTML = '<i class="fas fa-object-group"></i> Show Tile Layout';
+    if (presenter) {
+        alertify.error('The Presenter Can Only View Spotlight Mode.');
+    } else {
+        if (document.getElementById('remoteVid').classList.contains('presentation')) {
+            document.getElementById('remoteVid').classList.remove('presentation');
+            document.getElementById('present').classList.add('hidden');
+            document.getElementById('remoteVid').classList.add('discussion');
+            document.getElementById('changeMode').innerHTML = '<i class="fas fa-object-group"></i> Show Spotlight Layout';
+        }
+        else {
+            document.getElementById('remoteVid').classList.remove('discussion');
+            document.getElementById('remoteVid').classList.add('presentation');
+            document.getElementById('present').classList.remove('hidden');
+            document.getElementById('changeMode').innerHTML = '<i class="fas fa-object-group"></i> Show Tile Layout';
+        }
     }
 });

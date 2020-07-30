@@ -86,6 +86,11 @@ function addPresenter () {
     presenter = true;
     alertify.success('You Are Now Presenter.');
     document.getElementById('headClose').classList.remove('btn-disabled');
+    // Force Switch To Spotlight Mode
+    document.getElementById('remoteVid').classList.remove('discussion');
+    document.getElementById('remoteVid').classList.add('presentation');
+    document.getElementById('present').classList.remove('hidden');
+    document.getElementById('changeMode').innerHTML = '<i class="fas fa-object-group"></i> Show Tile Layout';
 }
 function removePresenter () {
     presenter = false;
