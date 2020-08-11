@@ -40,6 +40,9 @@
 .splash-small-blue {
     background-color: rgb(100, 149, 237);
 }
+.splash-small-purple {
+    background-color: mediumpurple;
+}
 .splash-small-panel {
     background-color: transparent;
     text-align: center;
