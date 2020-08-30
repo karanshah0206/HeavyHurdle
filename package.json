@@ -1,0 +1,27 @@
+{
+  "name": "heavyhurdle",
+  "version": "1.0.0",
+  "description": "A simple and sophisticated video conferencing web app",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karanshah0206/HeavyHurdle.git"
+  },
+  "keywords": [
+    "Video",
+    "Conferencing"
+  ],
+  "author": "Karan Shah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karanshah0206/HeavyHurdle/issues"
+  },
+  "homepage": "https://github.com/karanshah0206/HeavyHurdle#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
