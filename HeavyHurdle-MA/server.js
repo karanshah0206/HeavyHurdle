@@ -9,3 +9,7 @@ app.use(express.static('public'));
 server.listen(port, () => {
     console.log('Server started.');
 });
+
+io.on('connection', (socket) => {
+    console.log('New connection: ' + socket.id);
+})
