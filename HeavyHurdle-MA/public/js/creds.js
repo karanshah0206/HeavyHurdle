@@ -1,14 +1,15 @@
 // Getting Credentials
 const room = getCreds('room');
+const user = localStorage.getItem('HHUser') || "Anonymous";
+var admin = localStorage.getItem('HHAdmin') || false;
+var presenter = false;
+
 if (!room) {
     // window.location="../../HeavyHurdle-LS/index.html"
 }
 else {
     joinRoom();
 }
-const user = localStorage.getItem('HHUser') || "Anonymous";
-var admin = localStorage.getItem('HHAdmin') || false;
-var presenter = false;
 
 // Uses GET For Javascript
 function getCreds(key='') {

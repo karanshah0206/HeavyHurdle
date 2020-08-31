@@ -12,8 +12,13 @@ server.listen(port, () => {
 
 io.on('connection', (socket) => {
     console.log('New connection: ' + socket.id);
-    socket.on('joinRoom', (room) => {
-        socket.join(room);
-        console.log('Connection ' + socket.id + ' joined room ' + room);
+
+    // Join Room
+    socket.on('joinRoom', (memberDetails) => {
+        socket.join(memberDetails.room);
+        if (socket.adapter.rooms[memberDetails.room].length > 1) {
+            socket.to(memberDetails.room).emit('userJoined', (memberDetails.user));
+        }
+        console.log('Connection ' + socket.id + ' joined room ' + memberDetails.room);
     });
 });
