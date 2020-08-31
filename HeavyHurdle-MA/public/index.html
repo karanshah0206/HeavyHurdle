@@ -41,10 +41,16 @@
             <button id="chatBarClose" class="btn btn-close"><i class="fas fa-times"></i></button>
         </div>
         <div class="slider-body">
-            <div class="chat-container"></div>
+            <div class="chat-container" id="chatContainer">
+                <div class="chat-box">
+                    <div class="chat-namestamp">Karan Shah</div>
+                    <div class="chat-content">This is a sample message.</div>
+                    <div class="chat-timestamp">9:30AM 7/27/2020</div>
+                </div>
+            </div>
             <div class="chat-send">
                 <textarea id="chatMessage" rows="1"></textarea>
-                <button id="chatSend" class="btn-disabled"><i class="fa fa-paper-plane"></i></button>
+                <button id="chatSend" class="btn-disabled" onclick="sendChat()"><i class="fa fa-paper-plane"></i></button>
             </div>
         </div>
     </div>

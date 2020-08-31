@@ -17,7 +17,12 @@ io.on('connection', (socket) => {
         if (socket.adapter.rooms[memberDetails.room].length > 1) {
             socket.to(memberDetails.room).emit('userJoined', ({id: socket.id, name: memberDetails.user, new: memberDetails.new}));
         }
-        console.timeLog('Connection ' + socket.id + ' joined room ' + memberDetails.room);
+        console.log('Connection ' + socket.id + ' joined room ' + memberDetails.room);
+    });
+
+    // Chat Message
+    socket.on('chatMessage', (data) => {
+        socket.to(data.room).emit('chatMessage', {user: data.user, message: data.message});
     });
 
     // Disconnect
