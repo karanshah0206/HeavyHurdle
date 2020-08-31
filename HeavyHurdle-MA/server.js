@@ -12,4 +12,8 @@ server.listen(port, () => {
 
 io.on('connection', (socket) => {
     console.log('New connection: ' + socket.id);
-})
+    socket.on('joinRoom', (room) => {
+        socket.join(room);
+        console.log('Connection ' + socket.id + ' joined room ' + room);
+    });
+});
