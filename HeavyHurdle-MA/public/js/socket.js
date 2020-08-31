@@ -2,8 +2,12 @@ const socket = io();
 
 // New User Joins
 socket.on('userJoined', (user) => {
-    alertify.success(user.name + ' has joined the room');
-    addUser(user);
+    if (findUser(user.id) == null || findUser(user.id) == undefined) {
+        if (user.new)
+            alertify.success(user.name + ' has joined the room');
+        addUser(user);
+    }
+    joinRoom(false);
 });
 
 // User Leaves
@@ -13,6 +17,6 @@ socket.on('userLeft', (user) => {
 })
 
 // Join Room
-function joinRoom () {
-    socket.emit('joinRoom', {room: room, user: user});
+function joinRoom (isNew) {
+    socket.emit('joinRoom', {room: room, user: user, new: isNew});
 }

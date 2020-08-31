@@ -8,7 +8,7 @@ if (!room) {
     // window.location="../../HeavyHurdle-LS/index.html"
 }
 else {
-    joinRoom();
+    joinRoom(true);
 }
 
 // Uses GET For Javascript
