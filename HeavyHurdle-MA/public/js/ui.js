@@ -73,3 +73,23 @@ document.getElementById('changeMode').addEventListener('click', () => {
         }
     }
 });
+
+// Add Chat Message
+function addMessage(data) {
+    // var today = new Date();
+    var chatBox = document.createElement('div');
+    chatBox.classList.add('chat-box');
+    document.getElementById('chatContainer').appendChild(chatBox);
+    var chatName = document.createElement('div');
+    chatName.classList.add('chat-namestamp');
+    chatName.innerText = data.user;
+    chatBox.appendChild(chatName);
+    var chatMessage = document.createElement('div');
+    chatMessage.classList.add('chat-content');
+    chatMessage.innerText = data.message;
+    chatBox.appendChild(chatMessage);
+    var chatTime = document.createElement('div');
+    chatTime.classList.add('chat-timestamp');
+    chatTime.innerText = new Date(Date.now()).toLocaleTimeString("en-us");
+    chatBox.appendChild(chatTime);
+}

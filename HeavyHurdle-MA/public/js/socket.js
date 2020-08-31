@@ -27,9 +27,10 @@ function sendChat() {
     let message = document.getElementById('chatMessage').value;
     socket.emit('chatMessage', {room: room, user: user, message: message});
     document.getElementById('chatMessage').value = "";
+    addMessage({user: user, message: message});
 }
 
 // Incoming Chat Message
 socket.on('chatMessage', (data) => {
-    alert("Sender: " + data.user + " Content: " + data.message);
+    addMessage(data);
 });

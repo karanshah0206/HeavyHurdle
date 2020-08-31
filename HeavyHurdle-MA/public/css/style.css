@@ -145,8 +145,8 @@
     display: none;
     position: fixed;
     opacity: 0.7;
-    bottom: 10px;
-    right: 10px;
+    top: 5px;
+    left: 5px;
     z-index: 4;
 }
 @media screen and (max-width: 767px) {
@@ -351,10 +351,13 @@
 
 /* Chat */
 .chat-box {
-    width: 100%;
-    margin: 0;
+    width: 96%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
     padding: 5px 0;
-    
+    background-color: skyblue;
+    border-radius: 5px;
 }
 .chat-container {
     width: 100%;
