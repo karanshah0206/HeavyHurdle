@@ -24,6 +24,6 @@ function findUser(id) {
 }
 
 function removeUser(id) {
+    document.getElementById(id).remove();
     users[id] = null;
-    console.log(users);
 }
