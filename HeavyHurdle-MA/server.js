@@ -17,8 +17,13 @@ io.on('connection', (socket) => {
     socket.on('joinRoom', (memberDetails) => {
         socket.join(memberDetails.room);
         if (socket.adapter.rooms[memberDetails.room].length > 1) {
-            socket.to(memberDetails.room).emit('userJoined', (memberDetails.user));
+            socket.to(memberDetails.room).emit('userJoined', ({id: socket.id, name: memberDetails.user}));
         }
         console.log('Connection ' + socket.id + ' joined room ' + memberDetails.room);
+    });
+
+    // Disconnect
+    socket.on('disconnecting', () => {
+        socket.to(Object.keys(socket.rooms)[1]).emit('userLeft', (socket.id));
     });
 });
