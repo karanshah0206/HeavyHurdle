@@ -1,0 +1,15 @@
+{
+  "name": "heavyhurdle",
+  "version": "1.0.0",
+  "description": "A simple and sophisticated video conferencing web app",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server"
+  },
+  "author": "Karan Shah",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}

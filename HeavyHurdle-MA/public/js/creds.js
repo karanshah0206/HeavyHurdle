@@ -1,7 +1,7 @@
 // Getting Credentials
 const room = getCreds('room');
 if (!room) {
-    // window.location="../HeavyHurdle-LS/index.html"
+    // window.location="../../HeavyHurdle-LS/index.html"
 }
 const user = localStorage.getItem('HHUser') || "Anonymous";
 var admin = localStorage.getItem('HHAdmin') || false;
