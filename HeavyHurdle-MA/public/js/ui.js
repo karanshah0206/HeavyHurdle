@@ -74,6 +74,16 @@ document.getElementById('changeMode').addEventListener('click', () => {
     }
 });
 
+// Chat button enable/disable
+document.getElementById('chatMessage').addEventListener('input', () => {
+    if (document.getElementById('chatMessage').value.replace(/\s/g, '').length) {
+        document.getElementById('chatSend').classList.remove('btn-disabled');
+    }
+    else {
+        document.getElementById('chatSend').classList.add('btn-disabled');
+    }
+});
+
 // Add Chat Message
 function addMessage(data) {
     var chatBox = document.createElement('div');
