@@ -26,9 +26,11 @@ function joinRoom (isNew) {
 // Send Chat Message
 function sendChat() {
     let message = document.getElementById('chatMessage').value;
-    socket.emit('chatMessage', {room: room, user: user, message: message});
+    if (message.replace(/\s/g, '').length) {
+        socket.emit('chatMessage', {room: room, user: user, message: message});
+        addMessage({user: user, message: message});
+    }
     document.getElementById('chatMessage').value = "";
-    addMessage({user: user, message: message});
 }
 
 // Incoming Chat Message

@@ -76,7 +76,6 @@ document.getElementById('changeMode').addEventListener('click', () => {
 
 // Add Chat Message
 function addMessage(data) {
-    // var today = new Date();
     var chatBox = document.createElement('div');
     chatBox.classList.add('chat-box');
     document.getElementById('chatContainer').appendChild(chatBox);
