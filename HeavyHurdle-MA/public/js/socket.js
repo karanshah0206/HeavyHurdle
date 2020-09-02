@@ -37,3 +37,14 @@ function sendChat() {
 socket.on('chatMessage', (data) => {
     addMessage(data);
 });
+
+// User Raises Hand
+function raiseHand() {
+    socket.emit('raiseHand', {room: room, user: user});
+}
+
+// Raised Hand Recieved
+socket.on('raiseHand', (user) => {
+    if (admin)
+        toastr.info(user + ' has raised their hand');
+});

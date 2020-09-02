@@ -25,6 +25,11 @@ io.on('connection', (socket) => {
         socket.to(data.room).emit('chatMessage', {user: data.user, message: data.message});
     });
 
+    // Raise Hand
+    socket.on('raiseHand', (data) => {
+        socket.to(data.room).emit('raiseHand', (data.user));
+    });
+
     // Disconnect
     socket.on('disconnecting', () => {
         socket.to(Object.keys(socket.rooms)[1]).emit('userLeft', (socket.id));
