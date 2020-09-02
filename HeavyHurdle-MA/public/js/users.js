@@ -41,6 +41,6 @@ function addSelf (user) {
     document.getElementById(user.id).appendChild(userName);
     var userControls = document.createElement('div');
     userControls.classList.add('user-controls');
-    userControls.innerHTML = "<i id='" + user.id + "-mute' class='fas fa-microphone-slash user-status invisible'></i><i id='"+ user.id +"-video' class='fas fa-video-slash user-status invisible'></i>";
+    userControls.innerHTML = "<i id='you-mute' class='fas fa-microphone-slash user-status invisible'></i><i id='you-video' class='fas fa-video-slash user-status invisible'></i>";
     document.getElementById(user.id).appendChild(userControls);
 }

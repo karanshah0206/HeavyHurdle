@@ -31,6 +31,7 @@ function sendChat() {
         addMessage({user: user, message: message});
     }
     document.getElementById('chatMessage').value = "";
+    document.getElementById('chatSend').classList.add('btn-disabled');
 }
 
 // Incoming Chat Message
