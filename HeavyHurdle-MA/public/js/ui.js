@@ -1,3 +1,6 @@
+// Toastr Options
+toastr.options = { "closeButton": true, "positionClass": "toast-bottom-left" };
+
 // Show/Hide Admin Controls
 if (!admin || admin == "false") {
     var onlyAdmin = document.getElementsByClassName('admin-only');
