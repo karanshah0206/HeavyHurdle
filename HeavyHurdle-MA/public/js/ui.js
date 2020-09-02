@@ -12,6 +12,40 @@ if (admin == "true") {
     }
 }
 
+// Fullscreen
+document.getElementById('fullscreen').addEventListener('click', () => {
+    var elem = document.getElementsByTagName('body')[0];
+    if(window.innerHeight == screen.height) {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    } else {
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+        }
+    }
+});
+
+window.addEventListener('resize', () => {
+    if(window.innerHeight == screen.height) {
+        document.getElementById('fullscreen').innerHTML = "<i class='fas fa-compress' id='fullscreenIcon'></i> Disable Fullscreen"
+    } else {
+        document.getElementById('fullscreen').innerHTML = "<i class='fas fa-expand' id='fullscreenIcon'></i> Enable Fullscreen"
+    }
+});
+
 // Control List Toggle
 document.getElementById('allControl').addEventListener('click', () => {
     document.getElementById('listControls').classList.toggle('hidden');

@@ -1,4 +1,8 @@
 /* General */
+html, body {
+    background-color: #ffffff !important;
+}
+
 * {
     margin: 0;
     padding: 0;
