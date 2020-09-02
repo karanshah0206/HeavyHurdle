@@ -93,3 +93,6 @@ function addMessage(data) {
     chatTime.innerText = new Date(Date.now()).toLocaleTimeString("en-us");
     chatBox.appendChild(chatTime);
 }
+
+// Add User To User Panel
+addSelf({id: socketId, name: (user + " (You)")});

@@ -1,4 +1,5 @@
 const socket = io();
+const socketId = socket.io.engine.id;
 
 // New User Joins
 socket.on('userJoined', (user) => {
