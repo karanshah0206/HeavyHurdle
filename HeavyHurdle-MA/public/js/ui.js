@@ -91,7 +91,7 @@ document.getElementById('userBarClose').addEventListener('click', () => {
 // Change Mode
 document.getElementById('changeMode').addEventListener('click', () => {
     if (presenter) {
-        alertify.error('The Presenter Can Only View Spotlight Mode.');
+        toastr.error('The Presenter Can Only View Spotlight Mode.');
     } else {
         if (document.getElementById('remoteVid').classList.contains('presentation')) {
             document.getElementById('remoteVid').classList.remove('presentation');

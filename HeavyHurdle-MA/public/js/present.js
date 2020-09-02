@@ -14,7 +14,7 @@ document.getElementById('headClose').addEventListener('click', () => {
         removePresenter();
     }
     else if (admin) {
-        alertify.message('Admin Has Closed Presentation.');
+        toastr.warning('Admin Has Closed Presentation.');
         frame.src = '';
         head.innerText = 'Presentation';
         document.getElementById('presentHeader').classList.add('hidden');
@@ -22,7 +22,7 @@ document.getElementById('headClose').addEventListener('click', () => {
         speaker.classList.remove('hidden');
     }
     else {
-        alertify.error('Only Admin/Presenter Can Close Presentation.');
+        toastr.error('Only Admin/Presenter Can Close Presentation.');
     }
 });
 document.getElementById('toggleNote').addEventListener('click', () => {
@@ -33,7 +33,7 @@ document.getElementById('toggleNote').addEventListener('click', () => {
         setNotepad();
     }
     else {
-        alertify.error('Another Presentation Running.');
+        toastr.error('Another Presentation Running.');
     }
 });
 document.getElementById('toggleCode').addEventListener('click', () => {
@@ -44,7 +44,7 @@ document.getElementById('toggleCode').addEventListener('click', () => {
         setCode();
     }
     else {
-        alertify.error('Another Presentation Running.');
+        toastr.error('Another Presentation Running.');
     }
 });
 document.getElementById('toggleBoard').addEventListener('click', () => {
@@ -55,7 +55,7 @@ document.getElementById('toggleBoard').addEventListener('click', () => {
         setBoard();
     }
     else {
-        alertify.error('Another Presentation Running.');
+        toastr.error('Another Presentation Running.');
     }
 });
 document.getElementById('toggleYouTube').addEventListener('click', () => {
@@ -66,7 +66,7 @@ document.getElementById('toggleYouTube').addEventListener('click', () => {
         setYoutube();
     }
     else {
-        alertify.error('Another Presentation Running.');
+        toastr.error('Another Presentation Running.');
     }
 });
 document.getElementById('toggleViewer').addEventListener('click', () => {
@@ -77,14 +77,14 @@ document.getElementById('toggleViewer').addEventListener('click', () => {
         setViewier();
     }
      else {
-         alertify.error('Another Presentation Running.');
+         toastr.error('Another Presentation Running.');
      }
 });
 
 // Actions
 function addPresenter () {
     presenter = true;
-    alertify.success('You Are Now Presenter.');
+    toastr.success('You Are Now Presenter.');
     document.getElementById('headClose').classList.remove('btn-disabled');
     // Force Switch To Spotlight Mode
     document.getElementById('remoteVid').classList.remove('discussion');
@@ -94,7 +94,7 @@ function addPresenter () {
 }
 function removePresenter () {
     presenter = false;
-    alertify.message('You Are No More The Presenter.');
+    toastr.warning('You Are No More The Presenter.');
     frame.src = '';
     head.innerText = 'Presentation';
     if (!admin) {
