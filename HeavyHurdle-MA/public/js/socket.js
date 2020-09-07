@@ -17,6 +17,7 @@ socket.on('userJoined', (user) => {
 socket.on('userLeft', (user) => {
     alertify.error(findUser(user) + ' left the room');
     removeUser(user);
+    removeVid(user);
 })
 
 // Join Room

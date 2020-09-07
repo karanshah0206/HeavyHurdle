@@ -13,3 +13,7 @@ function createVid(user) {
     newVidStatus.innerHTML = "<i id='"+user.id+"-remMute' class='fas fa-microphone-slash'></i><i id='"+user.id+"-remBlind' class='fas fa-video-slash'></i>";
     document.getElementById(user.id + '-remVid').appendChild(newVidStatus);
 }
+
+function removeVid(user) {
+    document.getElementById(user + '-remVid').remove();
+}
