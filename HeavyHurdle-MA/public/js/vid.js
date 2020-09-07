@@ -10,7 +10,7 @@ function createVid(user) {
     document.getElementById(user.id + '-remVid').appendChild(newVidName);
     var newVidStatus = document.createElement('div');
     newVidStatus.classList.add('remoteStatus');
-    newVidStatus.innerHTML = "<i id='"+user.id+"-remMute' class='fas fa-microphone-slash'></i><i id='"+user.id+"-remBlind' class='fas fa-video-slash'></i>";
+    newVidStatus.innerHTML = "<i id='"+user.id+"-remMute' class='fas fa-microphone-slash hidden'></i><i id='"+user.id+"-remBlind' class='fas fa-video-slash hidden'></i>";
     document.getElementById(user.id + '-remVid').appendChild(newVidStatus);
 }
 
