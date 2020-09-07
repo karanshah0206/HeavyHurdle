@@ -6,7 +6,8 @@ socket.on('userJoined', (user) => {
     if (findUser(user.id) == null || findUser(user.id) == undefined) {
         if (user.new)
             alertify.success(user.name + ' has joined the room');
-            addUser(user);
+        addUser(user);
+        createVid(user);
     }
     if (user.new)
         joinRoom(false);

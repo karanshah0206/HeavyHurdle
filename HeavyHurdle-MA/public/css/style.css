@@ -273,8 +273,6 @@ html, body {
     top: 41px;
     height: calc(100vh - 50px);
     width: 94vw;
-    overflow-x: hidden;
-    overflow-y: auto;
     border: 1px solid #000000;
 }
 @media screen and (orientation: portrait) {
@@ -284,8 +282,6 @@ html, body {
         top: calc(50vh + 50px);
         width: 94vw;
         height: 40vh;
-        overflow-x: hidden;
-        overflow-y: auto;
         border: 1px solid #000000;
     }
 }
@@ -296,8 +292,6 @@ html, body {
         top: 41px;
         height: calc(100vh - 50px);
         width: 20vw;
-        overflow-x: hidden;
-        overflow-y: auto;
         border: 1px solid #000000;
     }
 }
@@ -360,7 +354,7 @@ html, body {
     margin-bottom: 5px;
     margin-top: 5px;
     padding: 5px 0;
-    background-color: skyblue;
+    background-color: rgb(135, 206, 235);
     border-radius: 5px;
 }
 .chat-container {
@@ -476,4 +470,46 @@ html, body {
 .user-status {
     color: rgb(255, 0, 0);
     padding-right: 5px;
+}
+
+/* Remote Video */
+#remoteVid {
+    overflow-x: auto;
+    overflow-y: auto;
+}
+.remoteContainer {
+    width: 100%;
+    max-width: 23vw;
+    height: 200px;
+    background-color: #000000;
+    margin-bottom: 2px;
+    margin-right: 2px;
+    float: left;
+    position: relative;
+}
+.remoteStatus {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 12px;
+    color: rgb(255, 0, 0);
+    padding: 2px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.remoteName {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    font-size: 10px;
+    padding: 0 2px;
+    max-height: 12px;
+    overflow: hidden;
+}
+@media screen and (max-width: 500px) {
+    .remoteContainer {
+        max-width: 100%;
+    }
 }
