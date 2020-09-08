@@ -12,6 +12,7 @@ socket.on('userJoined', (user) => {
     if (user.new)
         joinRoom(false);
     muteChecker();
+    blindChecker();
 });
 
 // User Leaves
@@ -59,4 +60,12 @@ socket.on('muteToggle', (data) => {
 });
 function toggleMute(isMute=true) {
     socket.emit('muteToggle', {room: room, isMute: isMute});
+}
+
+// Blind
+socket.on('blindToggle', (data) => {
+    blindUI(data);
+});
+function toggleBlind(isBlind=true) {
+    socket.emit('blindToggle', {room: room, isBlind: isBlind});
 }

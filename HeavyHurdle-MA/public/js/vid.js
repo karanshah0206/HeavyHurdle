@@ -51,3 +51,36 @@ function muteUI(data) {
         document.getElementById(`${data.id}-mute`).classList.add('invisible');
     }
 }
+
+// Blind Toggler
+function blindWorker() {
+    if (document.getElementById('vidControl').classList.contains('fa-video')) {
+        toggleBlind(true);
+        document.getElementById('vidControl').classList.remove('fa-video');
+        document.getElementById('vidControl').classList.add('fa-video-slash');
+        document.getElementById('you-video').classList.remove('invisible');
+    } else {
+        toggleBlind(false);
+        document.getElementById('vidControl').classList.remove('fa-video-slash');
+        document.getElementById('vidControl').classList.add('fa-video');
+        document.getElementById('you-video').classList.add('invisible');
+    }
+}
+
+function blindChecker() {
+    if (document.getElementById('vidControl').classList.contains('fa-video')) {
+        toggleBlind(false);
+    } else {
+        toggleBlind(true);
+    }
+}
+
+function blindUI(data) {
+    if (data.isBlind == true) {
+        document.getElementById(`${data.id}-remBlind`).classList.remove('hidden');
+        document.getElementById(`${data.id}-video`).classList.remove('invisible');
+    } else {
+        document.getElementById(`${data.id}-remBlind`).classList.add('hidden');
+        document.getElementById(`${data.id}-video`).classList.add('invisible');
+    }
+}

@@ -35,6 +35,11 @@ io.on('connection', (socket) => {
         socket.to(data.room).emit('muteToggle', ({id: socket.id, isMute: data.isMute}));
     });
 
+    // Blind
+    socket.on('blindToggle', (data) => {
+        socket.to(data.room).emit('blindToggle', ({id: socket.id, isBlind: data.isBlind}));
+    });
+
     // Disconnect
     socket.on('disconnecting', () => {
         socket.to(Object.keys(socket.rooms)[1]).emit('userLeft', (socket.id));
