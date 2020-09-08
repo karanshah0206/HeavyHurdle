@@ -11,6 +11,7 @@ socket.on('userJoined', (user) => {
     }
     if (user.new)
         joinRoom(false);
+    muteChecker();
 });
 
 // User Leaves

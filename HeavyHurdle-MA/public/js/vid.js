@@ -33,6 +33,15 @@ function muteWorker() {
         document.getElementById('you-mute').classList.add('invisible');
     }
 }
+
+function muteChecker() {
+    if (document.getElementById('micControl').classList.contains('fa-microphone')) {
+        toggleMute(false);
+    } else {
+        toggleMute(true);
+    }
+}
+
 function muteUI(data) {
     if (data.isMute == true) {
         document.getElementById(`${data.id}-remMute`).classList.remove('hidden');
