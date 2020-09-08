@@ -140,5 +140,20 @@ function addMessage(data) {
     chatBox.appendChild(chatTime);
 }
 
-// Add User To User Panel
+// Add Self To User Panel
 addSelf({id: socketId, name: (user + " (You)")});
+
+// Add Self To Remote Video
+var newVid = document.createElement('div');
+newVid.id = 'you' + '-remVid';
+newVid.classList.add('remoteContainer');
+document.getElementById('remoteVid').appendChild(newVid);
+var newVidName = document.createElement('div');
+newVidName.id = 'you' + '-remName';
+newVidName.innerHTML = user + ' <b>(You)</b>';
+newVidName.classList.add('remoteName');
+document.getElementById('you' + '-remVid').appendChild(newVidName);
+var newVidStatus = document.createElement('div');
+newVidStatus.classList.add('remoteStatus');
+newVidStatus.innerHTML = "<i id='"+"you"+"-remMute' class='fas fa-microphone-slash hidden'></i><i id='"+"you"+"-remBlind' class='fas fa-video-slash hidden'></i>";
+document.getElementById('you' + '-remVid').appendChild(newVidStatus);

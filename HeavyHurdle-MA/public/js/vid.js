@@ -26,11 +26,13 @@ function muteWorker() {
         document.getElementById('micControl').classList.remove('fa-microphone');
         document.getElementById('micControl').classList.add('fa-microphone-slash');
         document.getElementById('you-mute').classList.remove('invisible');
+        document.getElementById('you-remMute').classList.remove('hidden');
     } else {
         toggleMute(false);
         document.getElementById('micControl').classList.remove('fa-microphone-slash');
         document.getElementById('micControl').classList.add('fa-microphone');
         document.getElementById('you-mute').classList.add('invisible');
+        document.getElementById('you-remMute').classList.add('hidden');
     }
 }
 
@@ -59,11 +61,13 @@ function blindWorker() {
         document.getElementById('vidControl').classList.remove('fa-video');
         document.getElementById('vidControl').classList.add('fa-video-slash');
         document.getElementById('you-video').classList.remove('invisible');
+        document.getElementById('you-remBlind').classList.remove('hidden');
     } else {
         toggleBlind(false);
         document.getElementById('vidControl').classList.remove('fa-video-slash');
         document.getElementById('vidControl').classList.add('fa-video');
         document.getElementById('you-video').classList.add('invisible');
+        document.getElementById('you-remBlind').classList.add('hidden');
     }
 }
 
