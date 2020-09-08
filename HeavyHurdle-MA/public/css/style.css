@@ -273,7 +273,6 @@ html, body {
     top: 41px;
     height: calc(100vh - 50px);
     width: 94vw;
-    border: 1px solid #000000;
 }
 @media screen and (orientation: portrait) {
     .presentation {
@@ -282,7 +281,6 @@ html, body {
         top: calc(50vh + 50px);
         width: 94vw;
         height: 40vh;
-        border: 1px solid #000000;
     }
 }
 @media screen and (orientation: landscape) {
@@ -292,7 +290,6 @@ html, body {
         top: 41px;
         height: calc(100vh - 50px);
         width: 20vw;
-        border: 1px solid #000000;
     }
 }
 
