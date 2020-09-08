@@ -30,6 +30,11 @@ io.on('connection', (socket) => {
         socket.to(data.room).emit('raiseHand', (data.user));
     });
 
+    // Mute
+    socket.on('muteToggle', (data) => {
+        socket.to(data.room).emit('muteToggle', ({id: socket.id, isMute: data.isMute}));
+    });
+
     // Disconnect
     socket.on('disconnecting', () => {
         socket.to(Object.keys(socket.rooms)[1]).emit('userLeft', (socket.id));

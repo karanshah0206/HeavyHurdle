@@ -51,3 +51,11 @@ socket.on('raiseHand', (user) => {
     if (admin)
         toastr.info(user + ' has raised their hand');
 });
+
+// Mute
+socket.on('muteToggle', (data) => {
+    muteUI(data);
+});
+function toggleMute(isMute=true) {
+    socket.emit('muteToggle', {room: room, isMute: isMute});
+}
