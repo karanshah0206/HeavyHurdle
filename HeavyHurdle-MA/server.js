@@ -14,9 +14,7 @@ io.on('connection', (socket) => {
     // Join Room
     socket.on('joinRoom', (memberDetails) => {
         socket.join(memberDetails.room);
-        if (socket.adapter.rooms[memberDetails.room].length > 1) {
-            socket.to(memberDetails.room).emit('userJoined', ({id: socket.id, name: memberDetails.user, new: memberDetails.new}));
-        }
+        socket.to(memberDetails.room).emit('userJoined', ({id: socket.id, name: memberDetails.user, new: memberDetails.new}));
         console.log('Connection ' + socket.id + ' joined room ' + memberDetails.room);
     });
 
