@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/c9fd89f1de.js" crossorigin="anonymous"></script>
 
     <!-- Alertify -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
@@ -18,12 +19,6 @@
     <!-- Toastr -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
-    <script src="js/users.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="js/socket.js"></script>
-    <script src="js/creds.js"></script>
-    <script src="https://kit.fontawesome.com/c9fd89f1de.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <img src="img/icon.png" height="30px" width="30px" alt="HeavyHurdle" id="floatBrand">
@@ -84,10 +79,14 @@
         <div id="mainSpeaker" class=""></div>
     </div>
 
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/AgoraRTCSDK-3.2.1.js"></script>
+    <script src="js/users.js"></script>
+    <script src="js/socket.js"></script>
+    <script src="js/creds.js"></script>
     <script src="js/ui.js"></script>
     <script src="js/vid.js"></script>
     <script src="js/present.js"></script>
-    <script src="js/AgoraRTCSDK-3.2.1.js"></script>
     <script src="js/rtc.js"></script>
 </body>
 </html>

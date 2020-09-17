@@ -1,8 +1,6 @@
 let handleFail = function (err) { console.log("Error: ", err); }
 
 let remoteContainer = document.getElementById("tempVid");
-let client  = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
-client.init("c0041179099d492fa2dafcc82ec735c0");
 
 function addVideoStream (elementId) {
     let streamDiv = document.createElement("div");
@@ -23,6 +21,7 @@ client.join(null, room, null, (uid) => {
         localStream.play("you-remVid");
         client.publish(localStream, handleFail);
     }, handleFail);
+    agoraId = uid;
 }, handleFail);
 
 client.on("stream-added", (evt) => {
