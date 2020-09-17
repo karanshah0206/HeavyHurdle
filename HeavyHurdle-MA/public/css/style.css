@@ -492,6 +492,7 @@ html, body {
     color: rgb(255, 0, 0);
     padding: 2px;
     background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
 }
 .remoteName {
     position: absolute;
@@ -504,6 +505,7 @@ html, body {
     padding: 0 2px;
     max-height: 12px;
     overflow: hidden;
+    z-index: 1;
 }
 @media screen and (max-width: 500px) {
     .remoteContainer {

@@ -19,7 +19,7 @@ function removeVideoStream (elementId) {
 client.join(null, room, null, (uid) => {
     let localStream = AgoraRTC.createStream({ video: true, audio: true });
     localStream.init(() => {
-        //localStream.play("remoteVid");
+        localStream.play("you-remVid");
         client.publish(localStream, handleFail);
     }, handleFail);
 }, handleFail);
