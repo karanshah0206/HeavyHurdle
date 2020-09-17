@@ -7,6 +7,7 @@ client.init("c0041179099d492fa2dafcc82ec735c0");
 function addVideoStream (elementId) {
     let streamDiv = document.createElement("div");
     streamDiv.id = elementId;
+    streamDiv.style = "height: 100%; width: 100%;";
     streamDiv.style.transform = "rotateY(180deg)"; // Mirroring video
     remoteContainer.appendChild(streamDiv);
 }
