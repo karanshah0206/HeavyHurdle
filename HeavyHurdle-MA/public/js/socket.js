@@ -69,3 +69,11 @@ socket.on('blindToggle', (data) => {
 function toggleBlind(isBlind=true) {
     socket.emit('blindToggle', {room: room, isBlind: isBlind});
 }
+
+// Agora
+function shareAgoraId () {
+    socket.emit('agoraId', {room: room, agoraId: agoraId});
+}
+socket.on('agoraId', (data) => {
+    addAgoraVideo(data.id, data.agoraId);
+});

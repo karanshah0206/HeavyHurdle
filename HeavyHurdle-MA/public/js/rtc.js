@@ -26,6 +26,7 @@ client.join(null, room, null, (uid) => {
         client.publish(localStream, handleFail);
     }, handleFail);
     agoraId = uid;
+    shareAgoraId();
 }, handleFail);
 
 client.on("stream-added", (evt) => {

@@ -88,3 +88,17 @@ function blindUI(data) {
         document.getElementById(`${data.id}-video`).classList.add('invisible');
     }
 }
+
+// Add Agora Video
+function addAgoraVideo(sId, aId) {
+    setTimeout(() => {
+        if (document.getElementById(aId)) {
+            document.getElementById(sId + "-remVid").appendChild(document.getElementById(aId));
+        } else {
+        setAgoraTimeout(sId, aId);
+        }}, 2000);
+}
+
+function setAgoraTimeout(sId, aId) {
+    setTimeout(addAgoraVideo(sId, aId), 2000);
+}

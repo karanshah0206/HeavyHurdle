@@ -38,6 +38,11 @@ io.on('connection', (socket) => {
         socket.to(data.room).emit('blindToggle', ({id: socket.id, isBlind: data.isBlind}));
     });
 
+    // Agora
+    socket.on('agoraId', (data) => {
+        socket.to(data.room).emit('agoraId', ({id: socket.id, agoraId: data.agoraId}));
+    });
+
     // Disconnect
     socket.on('disconnecting', () => {
         socket.to(Object.keys(socket.rooms)[1]).emit('userLeft', (socket.id));
