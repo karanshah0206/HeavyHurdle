@@ -1,4 +1,9 @@
 var users = [];
+var agoraId;
+
+// Agora  Creds
+let client  = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
+client.init("c0041179099d492fa2dafcc82ec735c0");
 
 function addUser(user) {
     users[user.id] = user.name;

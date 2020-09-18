@@ -3,7 +3,6 @@ const room = getCreds('room');
 const user = localStorage.getItem('HHUser') || "Anonymous";
 var admin = localStorage.getItem('HHAdmin') || false;
 var presenter = false;
-var agoraId;
 
 if (!room) {
     // window.location="../../HeavyHurdle-LS/index.html"
@@ -11,10 +10,6 @@ if (!room) {
 else {
     joinRoom(true);
 }
-
-// Agora  Creds
-let client  = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
-client.init("c0041179099d492fa2dafcc82ec735c0");
 
 // Uses GET For Javascript
 function getCreds(key='') {
