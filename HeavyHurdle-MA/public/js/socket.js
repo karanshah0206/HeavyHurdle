@@ -78,5 +78,4 @@ function shareAgoraId (to=room) {
 }
 socket.on('agoraId', (data) => {
     addAgoraVideo(data.id, data.agoraId);
-    alert("Recieved: " + data.id + " " + data.agoraId);
 });
