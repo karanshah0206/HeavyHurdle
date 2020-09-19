@@ -4,8 +4,10 @@ const socketId = socket.io.engine.id;
 // New User Joins
 socket.on('userJoined', (user) => {
     if (findUser(user.id) == null || findUser(user.id) == undefined) {
-        if (user.new)
+        if (user.new) {
             alertify.success(user.name + ' has joined the room');
+            shareAgoraId(user.id);
+        }
         addUser(user);
         createVid(user);
     }
@@ -71,9 +73,10 @@ function toggleBlind(isBlind=true) {
 }
 
 // Agora
-function shareAgoraId () {
-    socket.emit('agoraId', {room: room, agoraId: agoraId});
+function shareAgoraId (to=room) {
+    socket.emit('agoraId', {room: to, agoraId: agoraId});
 }
 socket.on('agoraId', (data) => {
     addAgoraVideo(data.id, data.agoraId);
+    alert("Recieved: " + data.id + " " + data.agoraId);
 });
